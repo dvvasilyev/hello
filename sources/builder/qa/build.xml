@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="code-analyzers">
+
+	<import file="pmd/build.xml"/>
+	<import file="findbugs/build.xml"/>
+	<import file="checkstyle/build.xml"/>
+
+	<!--This is external variable. Please use ant with -Doutput.format parameter" />-->
+	<!--for example: ant perform-reports -Doutput.format=html-->
+	<!--<property name="output.format" value="html" />-->
+
+	<target name="perform-code-quality-reports" depends="-init-tools, compile">
+		<property file="qa/qa.properties"/>
+		<for list="${reports.tools}" param="tool.name">
+			<sequential>
+				<antcall target="perform-@{tool.name}">
+					<param name="report.prefix.name" value="@{tool.name}"/>
+				</antcall>
+			</sequential>
+		</for>
+		<echo>
+            please, see results in ${report.dir.analyzers}
+		</echo>
+	</target>
+
+</project>

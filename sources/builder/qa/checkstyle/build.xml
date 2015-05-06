@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="checkstyle">
+
+    <target name="perform-checkstyle">
+        <property name="output.path" value="${report.dir.analyzers}" />
+        <property name="output.xml" value="${output.path}/${report.prefix.name}_report.xml"/>
+        <property name="output.html" value="${output.path}/${report.prefix.name}_report.html"/>
+
+        <!--other stylesheets exists in checkstyle distrib in root of contrib folder-->
+        <property name="input.stylesheet" value="qa/checkstyle/checkstyle.xsl"/>
+
+        <taskdef resource="checkstyletask.properties" classpathref="qa.lib.path"/>
+
+        <checkstyle config="qa/checkstyle/metrics/sun_checks.xml"
+                    failureProperty="checkstyle.failure"
+                    failOnViolation="false">
+            <formatter
+                    type="xml"
+                    toFile="${output.xml}"/>
+            <fileset dir="${basedir}/.." includes="**/*.java" />
+        </checkstyle>
+        <if>
+            <and>
+                <isset property="output.format"/>
+                <equals arg1="${output.format}" arg2="html"/>
+            </and>
+            <then>
+                <xslt in="${output.xml}" out="${output.html}" style="${input.stylesheet}"/>
+            </then>
+        </if>
+    </target>
+
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation=
+                    "http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info organisation="dolvesa" module="hello.builder"/>
+    <configurations>
+        <conf name="javadoc" description="javadoc is javadoc"/>
+        <conf name="sources" description="sources are sources"/>
+        <conf name="compile" description="Libraries needed only for compilation"/>
+        <conf name="provided" description="Libraries provided by app containers"/>
+        <conf name="integration" description="Libraries for integration layer"/>
+        <conf name="temporary" description="temporary libs"/>
+        <conf name="report" description="Libraries for code quality tools"/>
+        <conf name="utils" description="Additional libraries for different purposes"/>
+        <conf name="runtime" description="Libraries only needed at runtime" extends="compile"/>
+        <conf name="test" description="Libraries only needed for testing" extends="runtime"/>
+    </configurations>
+
+    <dependencies>
+
+        <!-- ======== code analyzers ======== -->
+        <dependency org="net.sourceforge.pmd" name="pmd" rev="5.1.3" conf="report->default"/>
+        <dependency org="com.google.code.findbugs" name="findbugs" rev="3.0.0" conf="report->default"/>
+        <dependency org="com.puppycrawl.tools" name="checkstyle" rev="6.1.1" conf="report->default"/>
+
+        <!--======= logging =======-->
+        <dependency org="org.slf4j" name="slf4j-api" rev="1.7.9" conf="compile->default;javadoc->javadoc;sources->sources"/>
+        <dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.9" conf="compile->default;javadoc->javadoc;sources->sources"/>
+
+        <!--======= testing =======-->
+        <dependency org="org.testng" name="testng" rev="6.8.13" conf="test->default;javadoc->javadoc;sources->sources"/>
+
+    </dependencies>
+</ivy-module>

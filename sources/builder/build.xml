@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hello.builder" default="help" basedir=".">
+
+    <!-- folder with additional tools -->
+    <property name="tools.jar.dir" value="${user.home}/.ant/lib"/>
+    <path id="tools.lib.path">
+        <fileset dir="${tools.jar.dir}" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <!-- ========= for compilation ========= -->
+    <property name="project.root" value="${basedir}/../.."/>
+    <property name="app.root" value="${project.root}/sources/app"/>
+    <property name="java.sources.root" value="${app.root}/src/java"/>
+    <property name="test.sources.root" value="${app.root}/tests"/>
+
+    <path id="sources.path">
+        <pathelement location="${java.sources.root}"/>
+    </path>
+
+    <path id="test.sources.path">
+        <pathelement location="${test.sources.root}"/>
+    </path>
+
+    <path id="all.source.path">
+        <path refid="sources.path"/>
+        <path refid="test.sources.path"/>
+    </path>
+
+    <property name="out.path" value="${project.root}/tmp/"/>
+
+    <property name="out.classes.path" value="${out.path}/classes"/>
+    <property name="out.test.classes.path" value="${out.path}/tests"/>
+
+    <property name="lib.dir" value="${project.root}/tmp/lib"/>
+
+    <property name="runtime.libs" value="${lib.dir}/runtime"/>
+
+    <path id="all.libs.path">
+        <fileset dir="${lib.dir}/compile" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${lib.dir}/runtime" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${lib.dir}/provided" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${lib.dir}/test" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    <path id="tests.path.dependencies">
+        <path refid="all.libs.path"/>
+        <pathelement path="${out.classes.path}"/>
+        <pathelement path="${out.test.classes.path}"/>
+    </path>
+
+    <!-- ========= for code analyzers ========= -->
+    <!-- reports folders-->
+    <property name="report.dir" value="${out.path}/report/"/>
+    <property name="test.report.dir" value="${report.dir}/tests/"/>
+    <property name="report.dir.analyzers" value="${report.dir}/analyzers/"/>
+    <property name="report.dir.javadoc" value="${report.dir}/javadoc/"/>
+    <property name="ivy.report.dir" value="${report.dir}/ivy/"/>
+    <property name="lib.dir.report" value="${lib.dir}/report/"/>
+    <property name="lib.dir.utils" value="${lib.dir}/utils/"/>
+    <path id="qa.lib.path">
+        <fileset dir="${lib.dir.report}" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${lib.dir.utils}" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="-init-tools">
+        <taskdef resource="org/apache/ivy/ant/antlib.xml" classpathref="tools.lib.path" onerror="report"/>
+        <!-- initializing of tools' tasks -->
+        <!-- === ivy === -->
+        <taskdef name="ivy-configure" classname="org.apache.ivy.ant.IvyConfigure"/>
+        <taskdef name="ivy-resolve" classname="org.apache.ivy.ant.IvyResolve"/>
+        <taskdef name="ivy-retrieve" classname="org.apache.ivy.ant.IvyRetrieve"/>
+        <taskdef name="ivy-deliver" classname="org.apache.ivy.ant.IvyDeliver"/>
+        <taskdef name="ivy-publish" classname="org.apache.ivy.ant.IvyPublish"/>
+        <taskdef name="ivy-cachepath" classname="org.apache.ivy.ant.IvyCachePath"/>
+        <taskdef name="ivy-report" classname="org.apache.ivy.ant.IvyReport"/>
+
+        <!-- === ant-contrib === -->
+        <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="tools.lib.path" onerror="report"/>
+
+        <!-- === testng === -->
+        <taskdef resource="testngtasks" classpathref="all.libs.path"/>
+    </target>
+
+    <target name="-make-folders" description="make needed folders">
+        <mkdir dir="${tools.jar.dir}"/>
+        <mkdir dir="${out.classes.path}"/>
+        <mkdir dir="${out.test.classes.path}"/>
+        <mkdir dir="${test.report.dir}"/>
+        <mkdir dir="${report.dir.analyzers}"/>
+        <mkdir dir="${report.dir.javadoc}"/>
+    </target>
+
+    <target name="init">
+        <delete includeemptydirs="true" failonerror="false" deleteonexit="true">
+            <fileset dir="${lib.dir}"/>
+        </delete>
+        <delete includeemptydirs="true" failonerror="false" deleteonexit="true">
+            <fileset dir="${out.path}"/>
+        </delete>
+        <antcall target="-make-folders"/>
+    </target>
+
+    <target name="install-tools" depends="-make-folders" description="--> install additional tools/libs">
+        <!-- list of tools and their version -->
+        <property name="ivy.install.version" value="2.4.0"/>
+        <property name="ivy.jar.file" value="${tools.jar.dir}/ivy.jar"/>
+
+        <property name="ant-contrib.install.version" value="1.0b3"/>
+        <property name="ant-contrib.jar.file" value="${tools.jar.dir}/ant-contrib.jar"/>
+        <!-- end of tools' list -->
+
+        <!-- getting of tools -->
+        <get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar" dest="${ivy.jar.file}" usetimestamp="true"/>
+        <get src="http://central.maven.org/maven2/ant-contrib/ant-contrib/${ant-contrib.install.version}/ant-contrib-${ant-contrib.install.version}.jar"
+             dest="${ant-contrib.jar.file}"
+             usetimestamp="true"/>
+    </target>
+
+    <target name="get-deps" depends="-init-tools">
+        <ivy-retrieve pattern="${lib.dir}/[conf]/[artifact]-[type]-[revision].[ext]"/>
+        <ivy-report todir="${ivy.report.dir}" graph="false"/>
+    </target>
+
+    <target name="compile" depends="-make-folders">
+        <javac includeAntRuntime="false" destdir="${out.classes.path}" debug="true" encoding="UTF-8">
+            <classpath refid="all.libs.path"/>
+            <src refid="sources.path"/>
+        </javac>
+    </target>
+
+    <target name="-compile-tests" depends="-make-folders, compile">
+        <javac includeAntRuntime="false" destdir="${out.test.classes.path}" debug="true" encoding="UTF-8">
+            <classpath refid="all.libs.path"/>
+            <classpath path="${out.classes.path}"/>
+            <src refid="test.sources.path"/>
+        </javac>
+    </target>
+
+    <!--======= QA section =======-->
+    <import file="qa/build.xml"/>
+    <target name="code-quality-reports">
+        <antcall target="perform-code-quality-reports"/>
+    </target>
+
+    <target name="tests" depends="-init-tools, -compile-tests">
+        <testng outputdir="${test.report.dir}"
+                classpathref="tests.path.dependencies"
+                workingDir="${project.root}">
+            <classfileset dir="${out.test.classes.path}"/>
+        </testng>
+    </target>
+
+    <target name="makeJavaDoc">
+        <javadoc sourcepathref="all.source.path" destdir="${report.dir.javadoc}"
+                 classpathref="tests.path.dependencies"/>
+    </target>
+
+    <target name="makeReports" depends="-make-folders">
+        <antcall target="code-quality-reports"/>
+        <antcall target="tests"/>
+        <antcall target="makeJavaDoc"/>
+        <copy file="templates/rprts_tmplt.html" tofile="${report.dir}/index.html"/>
+    </target>
+
+    <target name="help">
+        <echo message="init => clear all generated artifacts and make folder structure [1) EXAMPLE>>> ant -f build.xml init]"/>
+        <echo message="install-tools => install additional tools and/or libs (ivy, ant-contrib) [2) EXAMPLE>>> ant -f build.xml install-tools]"/>
+        <echo message="get-deps => download project's dependencies (dependencies are listed in ivy.xml) [3) EXAMPLE>>> ant -f build.xml get-deps]"/>
+        <echo message="reports => Code style reports [b) EXAMPLE>>> ant -f build.xml -Doutput.format=html reports]"/>
+        <echo message="tests => Run tests [c) EXAMPLE>>> ant -f build.xml -Doutput.format=html tests]"/>
+        <echo message="makeReports => create documentation [7) EXAMPLE>>> ant -f build.xml -Doutput.format=html makeReports]"/>
+    </target>
+
+</project>

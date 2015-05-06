@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="pmd">
+
+	<target name="perform-pmd">
+		<taskdef name="pmd"
+                 classname="net.sourceforge.pmd.ant.PMDTask"
+                 classpathref="qa.lib.path"/>
+		<pmd shortFilenames="true">
+			<sourceLanguage name="java" version="1.7"/>
+			<ruleset>rulesets/java/design.xml</ruleset>
+			<ruleset>java-basic</ruleset>
+			<formatter
+                    type="${output.format}"
+                    toFile="${report.dir.analyzers}/${report.prefix.name}_report.${output.format}" />
+			<fileset dir="${java.sources.root}" includes="**/*.java" />
+		</pmd>
+	</target>
+
+</project>
