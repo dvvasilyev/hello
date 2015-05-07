@@ -3,17 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1bfccd99-848c-479e-a013-989e43ea205e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/findbugs/build.xml" afterPath="$PROJECT_DIR$/../../sources/builder/qa/findbugs/build.xml" />
-    </list>
-    <list id="be9ce7f5-c5fc-4e8c-b979-1f82a8710c9a" name="Idea" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/app.iml" afterPath="$PROJECT_DIR$/../../sources/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hello.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -717,13 +712,13 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1bfccd99-848c-479e-a013-989e43ea205e" name="Default" comment="" />
-      <changelist id="be9ce7f5-c5fc-4e8c-b979-1f82a8710c9a" name="Idea" comment="" />
+      <changelist id="" name="Idea" comment="" />
       <created>1430917693325</created>
       <option name="number" value="Default" />
       <updated>1430917693325</updated>
       <workItem from="1430917704602" duration="7326000" />
       <workItem from="1430993981185" duration="1795000" />
-      <workItem from="1430996636571" duration="7809000" />
+      <workItem from="1430996636571" duration="7834000" />
     </task>
     <task id="LOCAL-00001" summary="logging has been added to master branch">
       <created>1430995271527</created>
@@ -755,11 +750,17 @@
       <option name="project" value="LOCAL" />
       <updated>1431008520333</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Idea's settings">
+      <created>1431008547614</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1431008547614</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16930000" />
+    <option name="totallyTimeSpent" value="16955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="10" width="1345" height="720" extended-state="0" />
@@ -799,11 +800,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="logging has been added to master branch" />
-    <MESSAGE value="Idea's settings" />
     <MESSAGE value="tiny improvements" />
     <MESSAGE value="restore removed functionality" />
     <MESSAGE value="more complicated example" />
-    <option name="LAST_COMMIT_MESSAGE" value="more complicated example" />
+    <MESSAGE value="Idea's settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Idea's settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

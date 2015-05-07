@@ -8,8 +8,7 @@
 			<classpath refid="qa.lib.path"/>
 			<sourcePath path="${sources.root}" />
 			<class location="${out.classes.path}"/>
-			<auxClasspath refid="compile.path.libs" />
-			<auxClasspath refid="provided.path.libs" />
+			<auxClasspath refid="all.libs.path" />
 		</findbugs>
 	</target>
 
