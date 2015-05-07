@@ -10,13 +10,15 @@ import org.slf4j.LoggerFactory;
 public class Hello {
 
   private static Logger log = LoggerFactory.getLogger(Hello.class);
+  private int res;
 
   public int getRes() {
-    return 13;
+    log.debug("res is {}", res);
+    return res;
   }
 
   public void setRes(int res) {
-    int res1 = res;
+    this.res = res;
   }
 
   public static void main(String[] args) {
