@@ -23,17 +23,17 @@ public class JsonJsonTest {
 
   @Test
   public void testSourceJson() {
-    String res = jsonJson.sourceToJson();
+    String res = jsonJson.sourceAsJson();
     log.debug("source JSON is {}", res);
     Assert.assertTrue(res.contains("name"));
-    Assert.assertTrue(res.contains("_amount_"));
+    Assert.assertTrue(res.contains("13"));
   }
 
   @Test
   public void testTargetJson() {
-    String res = jsonJson.targetToJson();
+    String res = jsonJson.targetAsJson();
     log.debug("target JSON is {}", res);
     Assert.assertTrue(res.contains("title"));
-    Assert.assertTrue(res.contains("_amount_"));
+    Assert.assertTrue(res.contains("13"));
   }
 }
