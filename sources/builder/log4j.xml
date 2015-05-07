@@ -27,6 +27,7 @@
 
     <root>
         <level value="error"/>
-        <appender-ref ref="stdout"/>
+        <appender-ref ref="stdout" />
     </root>
+	
 </log4j:configuration>

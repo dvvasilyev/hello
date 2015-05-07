@@ -37,6 +37,9 @@
 
     <property name="runtime.libs" value="${lib.dir}/runtime"/>
 
+    <property name="log4j.config" value="log4j.xml"/>
+    <property name="report.template" value="templates/rprts_tmplt.html"/>
+
     <path id="all.libs.path">
         <fileset dir="${lib.dir}/compile" erroronmissingdir="false">
             <include name="*.jar"/>
@@ -111,6 +114,8 @@
             <fileset dir="${out.path}"/>
         </delete>
         <antcall target="-make-folders"/>
+        <copy file="${log4j.config}" todir="${out.classes.path}"/>
+        <copy file="${log4j.config}" todir="${out.test.classes.path}"/>
     </target>
 
     <target name="install-tools" depends="-make-folders" description="--> install additional tools/libs">
@@ -172,7 +177,7 @@
         <antcall target="code-quality-reports"/>
         <antcall target="tests"/>
         <antcall target="makeJavaDoc"/>
-        <copy file="templates/rprts_tmplt.html" tofile="${report.dir}/index.html"/>
+        <copy file="${report.template}" tofile="${report.dir}/index.html"/>
     </target>
 
     <target name="help">
