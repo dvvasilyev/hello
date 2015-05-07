@@ -18,7 +18,7 @@ public class HelloTest {
     int res = 3;
     log.debug("res is {}", res);
     hello.setRes(res);
-    Assert.assertNotEquals(res, hello.getRes());
+    Assert.assertEquals(res, hello.getRes());
   }
 
 }
