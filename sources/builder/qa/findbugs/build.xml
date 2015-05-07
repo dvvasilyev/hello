@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="findbugs">
 
-	<target name="perform-findbugs">
-		<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" classpathref="qa.lib.path"/>
-		<findbugs output="${output.format}"
+    <target name="perform-findbugs">
+        <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" classpathref="qa.lib.path"/>
+        <findbugs output="${output.format}"
                   outputFile="${report.dir.analyzers}/${report.prefix.name}_report.${output.format}">
-			<classpath refid="qa.lib.path"/>
-			<sourcePath path="${sources.root}" />
-			<class location="${out.classes.path}"/>
-			<auxClasspath refid="all.libs.path" />
-		</findbugs>
-	</target>
+            <classpath refid="qa.lib.path"/>
+            <sourcePath path="${sources.root}"/>
+            <class location="${out.classes.path}"/>
+            <auxClasspath refid="all.libs.path"/>
+        </findbugs>
+    </target>
 
 </project>

@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bfccd99-848c-479e-a013-989e43ea205e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/Hello.java" afterPath="$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/Hello.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/HelloTest.java" afterPath="$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/HelloTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/json/JsonJson.java" afterPath="$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/json/JsonJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/json/JsonJsonTest.java" afterPath="$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/json/JsonJsonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/json/MProfile.java" afterPath="$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/json/MProfile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/json/MProfileTest.java" afterPath="$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/json/MProfileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/app.iml" afterPath="$PROJECT_DIR$/../../sources/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/build.xml" afterPath="$PROJECT_DIR$/../../sources/builder/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/build.xml" afterPath="$PROJECT_DIR$/../../sources/builder/qa/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/build.xml" afterPath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/findbugs/build.xml" afterPath="$PROJECT_DIR$/../../sources/builder/qa/findbugs/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/pmd/build.xml" afterPath="$PROJECT_DIR$/../../sources/builder/qa/pmd/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/builder.iml" afterPath="$PROJECT_DIR$/../../sources/builder/builder.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/checkstyle.xsl" afterPath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/checkstyle.xsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/findbugs-idea.xml" afterPath="$PROJECT_DIR$/.idea/findbugs-idea.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/metrics/google_checks.xml" afterPath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/metrics/google_checks.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/ivy.xml" afterPath="$PROJECT_DIR$/../../sources/builder/ivy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/ivysettings.xml" afterPath="$PROJECT_DIR$/../../sources/builder/ivysettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/qa.properties" afterPath="$PROJECT_DIR$/../../sources/builder/qa/qa.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/templates/rprts_tmplt.html" afterPath="$PROJECT_DIR$/../../sources/builder/templates/rprts_tmplt.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/metrics/sun_checks.xml" afterPath="$PROJECT_DIR$/../../sources/builder/qa/checkstyle/metrics/sun_checks.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/test.xml" afterPath="$PROJECT_DIR$/.idea/libraries/test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hello.iws" />
@@ -80,8 +50,8 @@
       <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../sources/builder/qa/findbugs/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33156028">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.42123893">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -90,7 +60,7 @@
       <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../sources/builder/qa/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3448277">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="24" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="24" />
               <folding />
             </state>
@@ -112,7 +82,7 @@
       <file leaf-file-name="monProfiles.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../../tmp/MonitoringProfiles/monProfiles.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="19" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
@@ -122,7 +92,7 @@
       <file leaf-file-name="res.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../../tmp/MonitoringProfiles/res.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
@@ -209,9 +179,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,6 +362,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -742,13 +712,13 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1bfccd99-848c-479e-a013-989e43ea205e" name="Default" comment="" />
-      <changelist id="" name="Idea" comment="" />
       <created>1430917693325</created>
       <option name="number" value="Default" />
       <updated>1430917693325</updated>
       <workItem from="1430917704602" duration="7326000" />
       <workItem from="1430993981185" duration="1795000" />
-      <workItem from="1430996636571" duration="8312000" />
+      <workItem from="1430996636571" duration="8654000" />
+      <workItem from="1431009415564" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="logging has been added to master branch">
       <created>1430995271527</created>
@@ -790,7 +760,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17433000" />
+    <option name="totallyTimeSpent" value="17813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="10" width="1345" height="720" extended-state="0" />
@@ -804,23 +774,23 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115953304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299611" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67741936" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55178267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20311284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4804754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4804754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55178267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -867,6 +837,68 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/json/MProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sources/builder/qa/findbugs/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sources/builder/qa/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/json/MProfileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../tmp/MonitoringProfiles/monProfiles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../tmp/MonitoringProfiles/res.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../sources/builder/ivy.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1035,7 +1067,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../../tmp/MonitoringProfiles/monProfiles.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
@@ -1043,7 +1075,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../../tmp/MonitoringProfiles/res.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
@@ -1061,7 +1093,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../sources/builder/qa/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3448277">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="24" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="24" />
           <folding />
         </state>
@@ -1105,8 +1137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../sources/builder/qa/findbugs/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33156028">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.42123893">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding />
         </state>
       </provider>
