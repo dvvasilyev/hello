@@ -113,9 +113,7 @@
         <delete includeemptydirs="true" failonerror="false" deleteonexit="true">
             <fileset dir="${out.path}"/>
         </delete>
-        <antcall target="-make-folders"/>
-        <copy file="${log4j.config}" todir="${out.classes.path}"/>
-        <copy file="${log4j.config}" todir="${out.test.classes.path}"/>
+        <antcall target="-prepare-configs"/>
     </target>
 
     <target name="install-tools" depends="-make-folders" description="--> install additional tools/libs">
@@ -154,6 +152,11 @@
         </javac>
     </target>
 
+    <target name="-prepare-configs">
+        <copy file="${log4j.config}" todir="${out.classes.path}"/>
+        <copy file="${log4j.config}" todir="${out.test.classes.path}"/>
+    </target>
+
     <!--======= QA section =======-->
     <import file="qa/build.xml"/>
     <target name="code-quality-reports">
@@ -161,6 +164,7 @@
     </target>
 
     <target name="tests" depends="-init-tools, -compile-tests">
+        <antcall target="-prepare-configs" />
         <testng outputdir="${test.report.dir}"
                 classpathref="tests.path.dependencies"
                 workingDir="${project.root}">
