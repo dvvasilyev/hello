@@ -31,5 +31,8 @@
         <!--======= testing =======-->
         <dependency org="org.testng" name="testng" rev="6.8.13" conf="test->default;javadoc->javadoc;sources->sources"/>
 
+        <!--======= ssh =======-->
+        <dependency org="com.jcraft" name="jsch" rev="0.1.52" conf="compile->default;javadoc->javadoc;sources->sources"/>
+
     </dependencies>
 </ivy-module>
