@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bfccd99-848c-479e-a013-989e43ea205e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../sources/app/src/java/com/dolvesa/hello/ssh/SshFileUploader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/ssh/SshFileUploaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/app/app.iml" afterPath="$PROJECT_DIR$/../../sources/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/build.xml" afterPath="$PROJECT_DIR$/../../sources/builder/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sources/builder/ivy.xml" afterPath="$PROJECT_DIR$/../../sources/builder/ivy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1bfccd99-848c-479e-a013-989e43ea205e" name="Default" comment="" />
     <ignored path="hello.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -43,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/../../sources/builder/build.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
+              <caret line="33" column="70" selection-start-line="0" selection-start-column="0" selection-end-line="195" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -643,7 +636,7 @@
       <updated>1430917693325</updated>
       <workItem from="1430917704602" duration="7326000" />
       <workItem from="1430993981185" duration="1795000" />
-      <workItem from="1432039806286" duration="6323000" />
+      <workItem from="1432039806286" duration="6406000" />
     </task>
     <task id="LOCAL-00001" summary="logging has been added to master branch">
       <created>1430995271527</created>
@@ -667,11 +660,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15444000" />
+    <option name="totallyTimeSpent" value="15527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="10" width="1345" height="720" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -679,7 +672,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115953304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115953304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -882,14 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../sources/builder/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../sources/app/tests/com/dolvesa/hello/ssh/SshFileUploaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -897,6 +882,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sources/builder/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="70" selection-start-line="0" selection-start-column="0" selection-end-line="195" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
