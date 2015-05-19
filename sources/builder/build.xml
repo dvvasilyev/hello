@@ -30,8 +30,8 @@
 
     <property name="out.path" value="${project.root}/tmp/"/>
 
-    <property name="out.classes.path" value="${out.path}/classes"/>
-    <property name="out.test.classes.path" value="${out.path}/tests"/>
+    <property name="out.classes.path" value="${out.path}/compile/classes"/>
+    <property name="out.test.classes.path" value="${out.path}/compile/tests"/>
 
     <property name="lib.dir" value="${project.root}/tmp/lib"/>
 
