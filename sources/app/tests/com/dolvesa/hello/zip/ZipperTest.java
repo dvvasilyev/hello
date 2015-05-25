@@ -17,12 +17,10 @@ public class ZipperTest {
 
   private static Logger log = LoggerFactory.getLogger(ZipperTest.class);
 
-  private String outputFolder = "C:\\tmp\\output";
-
-  private String extractedFileName = "xml.xsd";
-  private String extractedFilePath = outputFolder + "\\xsd\\" + extractedFileName;
-
   private Zipper zipper = new Zipper();
+  private final String pathToArchivedFile = "NT_MME_NODE2_vnfplgin.zip";
+  private final String outputFolder = "C:\\tmp\\output";
+  private final String extractedFilePath = outputFolder + "\\" + pathToArchivedFile;
 
   @BeforeTest
   public void prepare() {
@@ -31,16 +29,15 @@ public class ZipperTest {
 
   @Test
   public void extractFile() {
-    String pathToArchivedFile = "xsd/xml.xsd";
-    String inputZip = "C:\\tmp\\schemas.zip";
+    String inputZip = "C:\\tmp\\MME.zip";
     zipper.extractFileFromArchive(inputZip, outputFolder, pathToArchivedFile);
     File f = new File(extractedFilePath);
     Assert.assertTrue(f.exists());
-    int extractedFileSize = 4646;
-    Assert.assertEquals(extractedFileSize, f.length());
+    int extractedFileSize = 189000;
+    Assert.assertTrue(extractedFileSize < f.length());
   }
 
-  @Test(dependsOnMethods = "extractFile")
+  @Test(dependsOnMethods = "extractFile", enabled = false)
   public void addFileToZip() {
     String outputZip = "C:\\tmp\\schemasNew.zip";
     zipper.addFileToZip(outputZip, extractedFilePath);

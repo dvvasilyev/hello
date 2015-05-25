@@ -3,10 +3,7 @@ package com.dolvesa.hello.zip;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -18,7 +15,7 @@ import java.util.zip.ZipOutputStream;
  */
 public class Zipper {
 
-  private static Logger log = LoggerFactory.getLogger(Zipper.class);
+  private static Logger LOG = LoggerFactory.getLogger(Zipper.class);
 
   /**
    * extract specified file from zip
@@ -36,27 +33,34 @@ public class Zipper {
           ze = zis.getNextEntry();
           continue;
         }
-        String archivedFileName = ze.getName();
-        File newFile = new File(outputFolder + File.separator + archivedFileName);
-        log.debug("file unzip : {}", newFile.getAbsoluteFile());
-        // todo: next line must execute (create parent folder(s) for file)
-        if (new File(newFile.getParent()).mkdirs())  {
-          log.debug("needed parent dirs have been created");
-        }
-        FileOutputStream fos = new FileOutputStream(newFile);
+        String zipName = ze.getName();
+        LOG.debug("zipName is {}", zipName);
+        zipName = zipName.substring(zipName.lastIndexOf("/") + 1);
+        LOG.debug("zipName is {}", zipName);
+        LOG.debug("getting the packed ZIP...");
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
         int len;
         byte[] buffer = new byte[1024];
         while ((len = zis.read(buffer)) > 0) {
+          baos.write(buffer, 0, len);
+        }
+        LOG.debug("transforming gotten ZIP to InputStream for jsch...");
+        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+        File newFile = new File(outputFolder + File.separator + zipName);
+        LOG.debug("file unzip : {}", newFile.getAbsoluteFile());
+        FileOutputStream fos = new FileOutputStream(newFile);
+        while ((len = bais.read(buffer)) > 0) {
           fos.write(buffer, 0, len);
         }
+        baos.close();
         fos.close();
-        ze = zis.getNextEntry();
+        break;
       }
       zis.closeEntry();
       zis.close();
-      log.debug("Done");
+      LOG.debug("Done");
     } catch (IOException e) {
-      log.error(e.getMessage(), e);
+      LOG.error(e.getMessage(), e);
     }
   }
 
@@ -80,9 +84,9 @@ public class Zipper {
       }
       zos.closeEntry();
       zos.close();
-      log.debug("Done");
+      LOG.debug("Done");
     } catch (IOException e) {
-      log.error(e.getMessage(), e);
+      LOG.error(e.getMessage(), e);
     }
   }
 
