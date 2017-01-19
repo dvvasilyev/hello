@@ -25,8 +25,10 @@
         <dependency org="com.puppycrawl.tools" name="checkstyle" rev="6.1.1" conf="report->default"/>
 
         <!--======= logging =======-->
-        <dependency org="org.slf4j" name="slf4j-api" rev="1.7.9" conf="compile->default;javadoc->javadoc;sources->sources"/>
-        <dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.9" conf="compile->default;javadoc->javadoc;sources->sources"/>
+        <dependency org="org.slf4j" name="slf4j-api" rev="1.7.9"
+                    conf="compile->default;javadoc->javadoc;sources->sources"/>
+        <dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.9"
+                    conf="compile->default;javadoc->javadoc;sources->sources"/>
 
         <!--======= testing =======-->
         <dependency org="org.testng" name="testng" rev="6.8.13" conf="test->default;javadoc->javadoc;sources->sources"/>
@@ -36,6 +38,10 @@
 
         <!--===== json =====-->
         <dependency org="com.google.code.gson" name="gson" rev="2.3.1" conf="compile->default;javadoc->javadoc;sources->sources"/>
+
+        <!--======= utils =======-->
+        <dependency org="com.google.guava" name="guava" rev="18.0"
+                    conf="compile->default;javadoc->javadoc;sources->sources"/>
 
     </dependencies>
 </ivy-module>
