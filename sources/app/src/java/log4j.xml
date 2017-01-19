@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="false" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{dd.MM.yyyy HH:mm:ss,SSS} - %p] %C.%M (%L) = %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="stderr" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.err"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="[%d{ISO8601}] %-5p %c %m %n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="WARN"/>
+            <param name="LevelMax" value="FATAL"/>
+        </filter>
+    </appender>
+
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{dd.MM.yyyy HH:mm:ss,SSS} - %p] %C.%M (%L) = %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="file" class="org.apache.log4j.RollingFileAppender">
+        <param name="append" value="false"/>
+        <param name="maxFileSize" value="100KB"/>
+        <param name="maxBackupIndex" value="5"/>
+        <!-- For Tomcat -->
+        <param name="file" value="./tmp/hello.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </layout>
+    </appender>
+
+    <category name="com.dolvesa">
+        <priority value="debug"/>
+    </category>
+
+    <category name="org.testng">
+        <priority value="fatal"/>
+    </category>
+
+    <root>
+        <level value="error"/>
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
+</log4j:configuration>
