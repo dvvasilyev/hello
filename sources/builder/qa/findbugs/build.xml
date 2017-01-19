@@ -2,7 +2,7 @@
 <project name="findbugs">
 
     <target name="perform-findbugs">
-        <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" classpathref="qa.lib.path"/>
+        <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" classpathref="all.libs.path"/>
         <findbugs output="${output.format}"
                   outputFile="${report.dir.analyzers}/${report.prefix.name}_report.${output.format}">
             <classpath refid="qa.lib.path"/>

@@ -53,6 +53,9 @@
         <fileset dir="${lib.dir}/test" erroronmissingdir="false">
             <include name="*.jar"/>
         </fileset>
+        <fileset dir="${lib.dir}/report" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
     </path>
     <path id="tests.path.dependencies">
         <path refid="all.libs.path"/>
@@ -188,7 +191,7 @@
         <echo message="init => clear all generated artifacts and make folder structure [1) EXAMPLE>>> ant -f build.xml init]"/>
         <echo message="install-tools => install additional tools and/or libs (ivy, ant-contrib) [2) EXAMPLE>>> ant -f build.xml install-tools]"/>
         <echo message="get-deps => download project's dependencies (dependencies are listed in ivy.xml) [3) EXAMPLE>>> ant -f build.xml get-deps]"/>
-        <echo message="reports => Code style reports [b) EXAMPLE>>> ant -f build.xml -Doutput.format=html reports]"/>
+        <echo message="reports => Code style reports [b) EXAMPLE>>> ant -f build.xml -Doutput.format=html makeReports]"/>
         <echo message="tests => Run tests [c) EXAMPLE>>> ant -f build.xml -Doutput.format=html tests]"/>
         <echo message="makeReports => create documentation [7) EXAMPLE>>> ant -f build.xml -Doutput.format=html makeReports]"/>
     </target>
