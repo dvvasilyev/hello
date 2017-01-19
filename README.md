@@ -3,3 +3,4 @@
 * unit testing (testng)
 * code quality (pmd, checkstyle, findbugs)
 * guice 3.0
+* json (gson)
