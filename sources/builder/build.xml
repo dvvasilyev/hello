@@ -30,8 +30,8 @@
 
     <property name="out.path" value="${project.root}/tmp/"/>
 
-    <property name="out.classes.path" value="${out.path}/classes"/>
-    <property name="out.test.classes.path" value="${out.path}/tests"/>
+    <property name="out.classes.path" value="${out.path}/compile/classes"/>
+    <property name="out.test.classes.path" value="${out.path}/compile/tests"/>
 
     <property name="lib.dir" value="${project.root}/tmp/lib"/>
 
@@ -51,6 +51,9 @@
             <include name="*.jar"/>
         </fileset>
         <fileset dir="${lib.dir}/test" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${lib.dir}/report" erroronmissingdir="false">
             <include name="*.jar"/>
         </fileset>
     </path>
@@ -113,9 +116,7 @@
         <delete includeemptydirs="true" failonerror="false" deleteonexit="true">
             <fileset dir="${out.path}"/>
         </delete>
-        <antcall target="-make-folders"/>
-        <copy file="${log4j.config}" todir="${out.classes.path}"/>
-        <copy file="${log4j.config}" todir="${out.test.classes.path}"/>
+        <antcall target="-prepare-configs"/>
     </target>
 
     <target name="install-tools" depends="-make-folders" description="--> install additional tools/libs">
@@ -154,6 +155,11 @@
         </javac>
     </target>
 
+    <target name="-prepare-configs">
+        <copy file="${log4j.config}" todir="${out.classes.path}"/>
+        <copy file="${log4j.config}" todir="${out.test.classes.path}"/>
+    </target>
+
     <!--======= QA section =======-->
     <import file="qa/build.xml"/>
     <target name="code-quality-reports">
@@ -161,6 +167,7 @@
     </target>
 
     <target name="tests" depends="-init-tools, -compile-tests">
+        <antcall target="-prepare-configs" />
         <testng outputdir="${test.report.dir}"
                 classpathref="tests.path.dependencies"
                 workingDir="${project.root}">
@@ -184,7 +191,7 @@
         <echo message="init => clear all generated artifacts and make folder structure [1) EXAMPLE>>> ant -f build.xml init]"/>
         <echo message="install-tools => install additional tools and/or libs (ivy, ant-contrib) [2) EXAMPLE>>> ant -f build.xml install-tools]"/>
         <echo message="get-deps => download project's dependencies (dependencies are listed in ivy.xml) [3) EXAMPLE>>> ant -f build.xml get-deps]"/>
-        <echo message="reports => Code style reports [b) EXAMPLE>>> ant -f build.xml -Doutput.format=html reports]"/>
+        <echo message="reports => Code style reports [b) EXAMPLE>>> ant -f build.xml -Doutput.format=html makeReports]"/>
         <echo message="tests => Run tests [c) EXAMPLE>>> ant -f build.xml -Doutput.format=html tests]"/>
         <echo message="makeReports => create documentation [7) EXAMPLE>>> ant -f build.xml -Doutput.format=html makeReports]"/>
     </target>

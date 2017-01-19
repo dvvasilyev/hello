@@ -31,6 +31,9 @@
         <!--======= testing =======-->
         <dependency org="org.testng" name="testng" rev="6.8.13" conf="test->default;javadoc->javadoc;sources->sources"/>
 
+        <!--======= core =======-->
+        <dependency org="com.google.inject" name="guice" rev="3.0" conf="compile->default;javadoc->javadoc;sources->sources"/>
+
         <!--===== json =====-->
         <dependency org="com.google.code.gson" name="gson" rev="2.3.1" conf="compile->default;javadoc->javadoc;sources->sources"/>
 
