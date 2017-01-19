@@ -20,6 +20,7 @@ public class RandomStringTest {
     byte length = 7;
     String res = rsg.randomString(length);
     log.debug("res: {}", res);
+    Assert.assertNotNull(res);
     Assert.assertEquals(res.length(), length);
   }
 
