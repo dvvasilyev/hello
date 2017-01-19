@@ -7,10 +7,12 @@ import org.testng.annotations.Test;
 
 /**
  * Created by Denis Vasilyev (dv@dolvesa.com) on 06.05.2015 at 18:15.
+ *
  * Simple test for Hello
  */
 public class HelloTest {
-   private static Logger log = LoggerFactory.getLogger(HelloTest.class);
+
+  private static Logger log = LoggerFactory.getLogger(HelloTest.class);
 
   @Test
   public void testRes() {

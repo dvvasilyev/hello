@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Created by Denis Vasilyev (dv@dolvesa.com) on 06.05.2015 at 18:06.
+ *
  * Stub class for checking initial settings of test- and logging-dependencies
  */
 public class Hello {

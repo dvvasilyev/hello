@@ -18,8 +18,8 @@ public class ZipperTest {
   private static Logger log = LoggerFactory.getLogger(ZipperTest.class);
 
   private Zipper zipper = new Zipper();
-  private final String pathToArchivedFile = "NT_MME_NODE2_vnfplgin.zip";
-  private final String outputFolder = "C:\\tmp\\output";
+  private final String pathToArchivedFile = "pathToArchivedFile";
+  private final String outputFolder = "outputFolder";
   private final String extractedFilePath = outputFolder + "\\" + pathToArchivedFile;
 
   @BeforeTest
@@ -29,7 +29,7 @@ public class ZipperTest {
 
   @Test
   public void extractFile() {
-    String inputZip = "C:\\tmp\\MME.zip";
+    String inputZip = "inputZip";
     zipper.extractFileFromArchive(inputZip, outputFolder, pathToArchivedFile);
     File f = new File(extractedFilePath);
     Assert.assertTrue(f.exists());
@@ -39,7 +39,7 @@ public class ZipperTest {
 
   @Test(dependsOnMethods = "extractFile", enabled = false)
   public void addFileToZip() {
-    String outputZip = "C:\\tmp\\schemasNew.zip";
+    String outputZip = "outputZip";
     zipper.addFileToZip(outputZip, extractedFilePath);
     File f = new File(outputZip);
     Assert.assertTrue(f.exists());
