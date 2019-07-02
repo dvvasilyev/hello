@@ -1,0 +1,46 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  config.vm.box_check_update = false
+#main rest
+  config.vm.network "forwarded_port", guest: 27017, host: 27017
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "512"
+  end
+
+  # tools installation
+  config.vm.provision "shell", inline: <<-SHELL
+    yum install -y wget vim zip unzip git ranger
+  SHELL
+
+  # GO settings
+  config.vm.provision "shell", inline: <<-SHELL
+	cd ~ && curl -O https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz
+	tar -C /usr/local -xzf go1.12.6.linux-amd64.tar.gz
+  SHELL
+
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+	echo 'export TZ="/usr/share/zoneinfo/Europe/Moscow"' >> .bash_profile
+
+	mkdir -p ~/projects/go
+	echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> .bash_profile
+	source ~/.bash_profile
+	
+	date
+	go version
+	
+	mkdir -p ~/projects/go/src/hello
+	echo "package main" > ~/projects/go/src/hello/hello.go
+	echo 'import "fmt"' >> ~/projects/go/src/hello/hello.go
+	echo 'func main() {' >> ~/projects/go/src/hello/hello.go
+	echo 'fmt.Printf("Hello, World")' >> ~/projects/go/src/hello/hello.go
+	echo '}' >> ~/projects/go/src/hello/hello.go
+	
+	cd ~/projects/go/src/hello
+	go build
+	./hello
+  SHELL
+
+  end
